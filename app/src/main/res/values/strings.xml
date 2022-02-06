@@ -2,4 +2,15 @@
     <string name="app_name">splash</string>
     <string name="sld">School Location Direct</string>
     <string name="ump">Universitas Muhammadiyah Purwokerto</string>
+    <string name="nama">Nama lengkap</string>
+    <string name="password">Password</string>
+    <string name="lupa_password">Lupa password?</string>
+    <string name="masuk">Masuk</string>
+    <string name="belum_punya">Belum punya akun? Daftar!</string>
+    <string name="rgsMasuk">Sudah punya akun? Masuk</string>
+    <string name="username">username</string>
+    <string name="email">Email</string>
+    <string name="nomor_telphone">Nomor telphone</string>
+    <string name="konfirmasi">Konfirmasi password</string>
+    <string name="rgsDaftar">Daftar</string>
 </resources>
