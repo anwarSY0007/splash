@@ -13,4 +13,10 @@
     <string name="nomor_telphone">Nomor telphone</string>
     <string name="konfirmasi">Konfirmasi password</string>
     <string name="rgsDaftar">Daftar</string>
+    <string name="logoNameTxt">School Destination</string>
+    <string name="todo">TODO</string>
+    <string name="sma">SMA/SMK</string>
+    <string name="smp">SMP/MTS</string>
+    <string name="sd">SD/MI</string>
+    <string name="paud_tk">PAUD/TK</string>
 </resources>

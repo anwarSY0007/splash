@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613144448947",
+    "project_id": "splash-d1db8",
+    "storage_bucket": "splash-d1db8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613144448947:android:ca5800f83a50da4a6605c6",
+        "android_client_info": {
+          "package_name": "com.anwar.splash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613144448947-222cvr5t8bivoo5jkipah9orr531rtdt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB347bEF6zpX1szfAsN9rH691O_4EZ_Kmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613144448947-222cvr5t8bivoo5jkipah9orr531rtdt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -85,6 +85,7 @@
             app:startIconDrawable="@drawable/ic_person"
             android:hint="@string/nama">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nama"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"/>
@@ -101,6 +102,7 @@
             android:hint="@string/username">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text" />
@@ -117,6 +119,7 @@
             android:hint="@string/email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress" />
@@ -133,6 +136,7 @@
             android:hint="@string/nomor_telphone">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nomor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="phone" />
@@ -149,6 +153,7 @@
             app:boxStrokeColor="#AC2732"
             android:hint="@string/password">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"/>
@@ -164,6 +169,7 @@
             app:boxStrokeColor="#AC2732"
             android:hint="@string/konfirmasi">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passKonfir"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"/>

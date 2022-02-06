@@ -82,12 +82,13 @@
             app:boxStrokeColor="#AC2732"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            app:startIconDrawable="@drawable/ic_person"
-            android:hint="@string/nama">
+            app:startIconDrawable="@drawable/ic_phone"
+            android:hint="@string/nomor_telphone">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/logNomor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textPersonName"/>
+                android:inputType="phone"/>
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -101,6 +102,7 @@
             app:boxStrokeColor="#AC2732"
             android:hint="@string/password">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/logPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"/>
