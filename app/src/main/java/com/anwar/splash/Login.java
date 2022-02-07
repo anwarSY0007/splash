@@ -16,9 +16,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class Login extends AppCompatActivity {
 
-    private Button btnMasuk,btnRegis,btnLupa;
     private TextInputEditText Nomor,Password;
 
     //koneksi database realtime firebase
@@ -40,60 +41,52 @@ public class Login extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
-        btnMasuk = findViewById(R.id.btnMasuk);
-        btnLupa = findViewById(R.id.btnLupa);
-        btnRegis = findViewById(R.id.btnRegis);
+        Button btnMasuk = findViewById(R.id.btnMasuk);
+        Button btnRegis = findViewById(R.id.btnRegis);
 
         Nomor = findViewById(R.id.logNomor);
         Password = findViewById(R.id.logPassword);
 
         //fungsi onclik
-        btnRegis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Login.this,Registrasi.class));
-                finish();
-            }
+        btnRegis.setOnClickListener(view -> {
+            startActivity(new Intent(Login.this,Registrasi.class));
+            finish();
         });
-        btnMasuk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //konsfersi data ke string
-                final String nomorTxt = Nomor.getText().toString();
-                final String passwordTxt = Password.getText().toString();
-                if (nomorTxt.isEmpty()||passwordTxt.isEmpty()){
-                    Toast.makeText(Login.this,"Pastikan semua fild telah di isi",Toast.LENGTH_SHORT).show();
-                }else {
-                    myDataRef.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            //cek apakah user sudah terdaftar
-                            if(snapshot.hasChild(nomorTxt)){
-                                //jika data ada mk ambil data
-                                final String getPassword = snapshot.child(nomorTxt).child("password").getValue(String.class);
-                                if (getPassword.equals(passwordTxt)){
-                                    Toast.makeText(Login.this,"Selamat berselancar!!",Toast.LENGTH_SHORT).show();
-                                    //redirect ke dashboard
-                                    startActivity(new Intent(Login.this,Dashboard.class));
-                                    finish();
-                                }else {
-                                    Toast.makeText(Login.this,"Silahkan periksa kembali password anda!!",Toast.LENGTH_SHORT).show();
-                                }
+        btnMasuk.setOnClickListener(view -> {
+            //konsfersi data ke string
+            final String nomorTxt = Objects.requireNonNull(Nomor.getText()).toString();
+            final String passwordTxt = Objects.requireNonNull(Password.getText()).toString();
+            if (nomorTxt.isEmpty()||passwordTxt.isEmpty()){
+                Toast.makeText(Login.this,"Pastikan semua fild telah di isi",Toast.LENGTH_SHORT).show();
+            }else {
+                myDataRef.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        //cek apakah user sudah terdaftar
+                        if(snapshot.hasChild(nomorTxt)){
+                            //jika data ada mk ambil data
+                            final String getPassword = snapshot.child(nomorTxt).child("password").getValue(String.class);
+                            if (Objects.equals(getPassword, passwordTxt)){
+                                Toast.makeText(Login.this,"Selamat berselancar!!",Toast.LENGTH_SHORT).show();
+                                //redirect ke dashboard
+                                startActivity(new Intent(Login.this,Dashboard.class));
+                                finish();
                             }else {
-                                Toast.makeText(Login.this,"Silahkan periksa kembali password dan nomor anda!!",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this,"Silahkan periksa kembali password anda!!",Toast.LENGTH_SHORT).show();
                             }
+                        }else {
+                            Toast.makeText(Login.this,"Silahkan periksa kembali password dan nomor anda!!",Toast.LENGTH_SHORT).show();
                         }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-                }
-
+                    }
+                });
 
             }
+
+
         });
     }
 }

@@ -5,10 +5,13 @@
       <map>
         <entry key="..\:/project/splash/app/src/main/res/drawable/bg_button.xml" value="0.1605" />
         <entry key="..\:/project/splash/app/src/main/res/drawable/ic_tk.xml" value="0.2015" />
-        <entry key="..\:/project/splash/app/src/main/res/layout/activity_dashboard.xml" value="0.19375" />
+        <entry key="..\:/project/splash/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
+        <entry key="..\:/project/splash/app/src/main/res/layout/activity_dashboard2.xml" value="0.19375" />
         <entry key="..\:/project/splash/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/project/splash/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/project/splash/app/src/main/res/layout/activity_registrasi.xml" value="0.19375" />
+        <entry key="..\:/project/splash/app/src/main/res/layout/header.xml" value="0.19375" />
+        <entry key="..\:/project/splash/app/src/main/res/menu/main_menu.xml" value="0.19375" />
       </map>
     </option>
   </component>

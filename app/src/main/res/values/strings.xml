@@ -19,4 +19,12 @@
     <string name="smp">SMP/MTS</string>
     <string name="sd">SD/MI</string>
     <string name="paud_tk">PAUD/TK</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="www_javacode_bumijawa_com">www.javacode-bumijawa.com</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="dikunjungi">Lokasi pernah dikunjungi</string>
+    <string name="lokasi_tersedia">Lokasi tersedia</string>
+    <string name="sekolah">Sekolah</string>
 </resources>
